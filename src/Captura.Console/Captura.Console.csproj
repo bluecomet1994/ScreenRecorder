@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Captura</RootNamespace>
+    <AssemblyName>captura-cli</AssemblyName>
+    <TargetFramework>net472</TargetFramework>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>..\Captura\Images\Captura.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Captura.Base\Captura.Base.csproj" />
+    <ProjectReference Include="..\Captura.Core\Captura.Core.csproj" />
+    <ProjectReference Include="..\Captura.Fakes\Captura.Fakes.csproj" />
+    <ProjectReference Include="..\Captura.FFmpeg\Captura.FFmpeg.csproj" />
+    <ProjectReference Include="..\Captura.Loc\Captura.Loc.csproj" />
+    <ProjectReference Include="..\Captura.MouseKeyHook\Captura.MouseKeyHook.csproj" />
+    <ProjectReference Include="..\Captura.SharpAvi\Captura.SharpAvi.csproj" />
+    <ProjectReference Include="..\Screna\Screna.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\Captura\Images\Captura.ico">
+      <Link>Captura.ico</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.2.1" />
+  </ItemGroup>
+  <Import Project="../PostBuild.targets" />
+</Project>
